@@ -18,8 +18,7 @@ class CardsPage extends React.Component {
       description: 'Donec ipsum dui, pharetra nec dignissim sit amet, dignissim ac dolor. Nulla facilisi. Cras ut hendrerit nunc. Aenean lobortis congue magna id aliquam. Ut eu odio in ante tincidunt varius at vel sapien.',
       category: 'Programs, Company',
       link: 'http://www.google.com.au',
-      featured: false,
-      documentSize: '112KB'
+      featured: false
     };
     const mockCard2 = { ...mockCard };
     mockCard2.featured = true;
@@ -34,9 +33,9 @@ class CardsPage extends React.Component {
       return (
         <div key={index} className={`card ${card.featured ? 'featured' : ''}`}>
           <div className="card-inner">
-            <h2>
+            <h1 className="card-title">
               {card.title}
-            </h2>
+            </h1>
             {card.featured &&
               <p>
                 {card.description}
@@ -49,7 +48,7 @@ class CardsPage extends React.Component {
               </div>
             }
             <div className="arrow-link">
-              <ArrowRight />
+              {card.documentSize ? <ArrowDown /> : <ArrowRight />}
             </div>
           </div>
         </div>
