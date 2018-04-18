@@ -5,6 +5,10 @@ class CardsPage extends React.Component {
   constructor(props) {
     super(props);
 
+    this.state = {
+      cards: []
+    }
+
     const mockCard = {
       id: '1',
       title: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit nam placerat mi eget dolor efficitur',
@@ -12,7 +16,7 @@ class CardsPage extends React.Component {
       category: 'Programs, Company',
       link: 'http://www.google.com.au',
       featured: false,
-      documentSize: false
+      documentSize: '112KB'
     };
     const mockCard2 = { ...mockCard };
     mockCard2.featured = true;
@@ -26,13 +30,18 @@ class CardsPage extends React.Component {
       return (
         <div key={index} className={`card ${card.featured ? 'featured' : ''}`}>
           <div className="card-inner">
-            <h1>
+            <h2>
               {card.title}
-            </h1>
+            </h2>
             {card.featured &&
               <p>
                 {card.description}
               </p>
+            }
+            {card.documentSize &&
+              <div className="download-link">
+                PDF ({card.documentSize})
+              </div>
             }
             <div className="arrow-link">
               >

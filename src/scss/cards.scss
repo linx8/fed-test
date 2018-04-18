@@ -2,7 +2,11 @@
  * Card styles go here
  */
 
- .cards {
+ $primary-colour: #15a4c9;
+ $secondary-colour: #20ad84;
+ $highlight-colour: #10766e;
+
+.cards {
   display: flex;
   width: 1150px;
   max-width: 100%;
@@ -10,28 +14,48 @@
   padding: 20px 0;
   flex-wrap: wrap;
   align-items: stretch;
-  box-sizing: border-box;
- }
+}
 
- .card {
-   position: relative;
-   margin: 8px;
-   border: 1px solid#cfcfcf;
-   width: calc(25% - 18px);
-   &.featured {
-     width: calc(50% - 18px);
-   }
+.card {
+  position: relative;
+  margin: 8px;
+  border: 1px solid#cfcfcf;
+  width: calc(25% - 18px);
+  min-height: 400px;
+  &.featured {
+    width: calc(50% - 18px);
+    background: linear-gradient(to bottom right, $primary-colour, $secondary-colour);
+    color: #FFF;
+    h2 {
+      font-size: 2em;
+    }
+    .download-link {
+      color: #FFF;
+    }
+    .arrow-link {
+      background-color: $highlight-colour;
+      color: #FFF;
+    }
+  }
 
-   .card-inner {
-    padding: 40px 30px;
+  .card-inner {
+    padding: 30px;
     display: flex;
     flex-direction: column;
     height: 100%;
+    box-sizing: border-box;
    }
+   .download-link {
+    color: #999;
+    font-size: 0.8em;
+    margin-top: auto;
+  }
+
    .arrow-link {
-     position: absolute;
-     bottom: 0;
-     right: 0;
-     padding: 20px;
-   }
- }
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 20px;
+    color: $primary-colour;
+  }
+}
