@@ -1,8 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import CardsPage from './pages/CardsPage';
 import './scss/index.scss';
 
 ReactDOM.render(
-  <div>Carter Digital Fed Test - Lincoln Le</div>,
+  <CardsPage />,
   document.getElementById('app')
 );

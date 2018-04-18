@@ -1,0 +1,37 @@
+/* 
+ * Card styles go here
+ */
+
+ .cards {
+  display: flex;
+  width: 1150px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 20px 0;
+  flex-wrap: wrap;
+  align-items: stretch;
+  box-sizing: border-box;
+ }
+
+ .card {
+   position: relative;
+   margin: 8px;
+   border: 1px solid#cfcfcf;
+   width: calc(25% - 18px);
+   &.featured {
+     width: calc(50% - 18px);
+   }
+
+   .card-inner {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+   }
+   .arrow-link {
+     position: absolute;
+     bottom: 0;
+     right: 0;
+     padding: 20px;
+   }
+ }
