@@ -18,12 +18,26 @@ const config = {
         test: /\.scss$/,
         use: [
           {
-            loader: "style-loader"
-          }, {
-            loader: "css-loader"
-          }, {
-            loader: "sass-loader"
-          }]
+            loader: 'style-loader'
+          },
+          {
+            loader: 'css-loader'
+          },
+          {
+            loader: 'sass-loader'
+          }
+        ]
+      },
+      {
+        test: /\.(svg)$/,
+        use: [
+          {
+            loader: 'babel-loader'
+          },
+          {
+            loader: 'react-svg-loader'
+          }
+        ]
       }
     ]
   },

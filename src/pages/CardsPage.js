@@ -1,5 +1,8 @@
 import React from 'react';
 import '../scss/cards.scss';
+import ArrowRight from '../../svg/arrow-right.svg';
+import ArrowDown from '../../svg/arrow-down.svg';
+import DocumentIcon from '../../svg/document.svg';
 
 class CardsPage extends React.Component {
   constructor(props) {
@@ -26,6 +29,7 @@ class CardsPage extends React.Component {
     //call api
   }
   render() {
+
     const PrintCards = this.mockCards.map((card, index) => {
       return (
         <div key={index} className={`card ${card.featured ? 'featured' : ''}`}>
@@ -40,11 +44,12 @@ class CardsPage extends React.Component {
             }
             {card.documentSize &&
               <div className="download-link">
-                PDF ({card.documentSize})
+                <DocumentIcon />
+                <span>PDF ({card.documentSize})</span>
               </div>
             }
             <div className="arrow-link">
-              >
+              <ArrowRight />
             </div>
           </div>
         </div>
