@@ -14,17 +14,17 @@ class CardsPage extends React.Component {
     }
   }
   componentDidMount() {
+    // Lets get the card data
     CardsService.getCards()
       .then(data => {
         this.setState({ cards: data.items });
-        console.log(this.state.cards);
       });
   }
   render() {
     const { cards } = this.state;
 
     const PrintCards = cards.map((card, index) => {
-      const cardFeatured = card.featured === 'true';
+      const cardFeatured = card.featured === 'true'; //check for string true
       return (
         <div key={index} className={`card ${cardFeatured ? 'featured' : ''}`}>
           <div className="card-inner">
@@ -60,12 +60,10 @@ class CardsPage extends React.Component {
       );
     } else {
       return (
-        <p className="text-center">Loading...</p>
+        <p className="text-center">Loading...</p> //Show loading
       );
     }
-
   }
-
 }
 
 export default CardsPage;

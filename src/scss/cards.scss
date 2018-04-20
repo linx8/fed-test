@@ -95,4 +95,15 @@
       width: calc(100% - 14px);      
     }
   }
+  @media screen and (max-width: $SM_SCREEN) {
+    .card-inner {
+      padding: 26px 20px;
+    }
+    .card-title {
+      font-size: 0.9em;
+    }
+    .download-link {
+      font-size: 0.7em;
+    }
+  }  
 }
