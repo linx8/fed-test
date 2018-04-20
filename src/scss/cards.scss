@@ -20,11 +20,18 @@
   width: calc(25% - 14px);
   min-height: 340px;
   color: #505050;
+  transition: all 0.2s ease-in;
+  &:hover {
+    transform: scale(1.02);
+  }
   &.featured {
     border: none;
     width: calc(50% - 14px);
-    background: linear-gradient(to bottom right, $primary-colour, $secondary-colour);
+    background: linear-gradient(120deg, $primary-colour, $secondary-colour);
     color: #FFF;
+    &:hover {
+      background: linear-gradient(-45deg, $primary-colour, $secondary-colour);
+    }
     .card-title {
       font-size: 1.6em;
       margin-bottom: 5px;
