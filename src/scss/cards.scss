@@ -83,9 +83,18 @@
     bottom: 0;
     right: 0;
     padding: 12px 14px 10px;
+    border: 1px solid transparent;
+    transition: 0.2s border ease-in-out;
+    &:hover {
+      border: 1px solid $secondary-colour;
+      svg {
+        fill: $secondary-colour;
+      }
+    }
     svg {
       fill: $primary-colour;
       width: 20px;
+      transition: fill 0.2s ease-in-out;
     }
   }
 
