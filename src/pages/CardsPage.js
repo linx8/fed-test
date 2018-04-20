@@ -32,7 +32,7 @@ class CardsPage extends React.Component {
               {card.title}
             </h1>
             {cardFeatured &&
-              <p>
+              <p className="card-description">
                 {card.description}
               </p>
             }
