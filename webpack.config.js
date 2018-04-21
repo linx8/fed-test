@@ -56,7 +56,7 @@ const config = {
   output: {
     path: __dirname + '/dist',
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'app.js'
   },
   devServer: {
     contentBase: './dist'
