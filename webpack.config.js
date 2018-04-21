@@ -18,10 +18,19 @@ const config = {
         test: /\.scss$/,
         use: [
           {
-            loader: 'style-loader'
+            loader: 'file-loader',
+            options: {
+              name: '[name].css'
+            }
+          },
+          {
+            loader: 'extract-loader'
           },
           {
             loader: 'css-loader'
+          },
+          {
+            loader: 'postcss-loader'
           },
           {
             loader: 'sass-loader'

@@ -1,6 +1,5 @@
 import React from 'react';
 import CardsService from '../services/CardsService';
-import '../scss/cards.scss';
 import ArrowRight from '../../svg/arrow-right.svg';
 import ArrowDown from '../../svg/arrow-down.svg';
 import DocumentIcon from '../../svg/document.svg';

@@ -4,9 +4,8 @@
   "description": "Code test for potential Carter front-end developers",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "webpack-dev-server --config ./webpack.config.js --mode development --env dev",
-    "build": "webpack"
+    "start": "NODE_ENV=dev webpack-dev-server --config ./webpack.config.js --mode development",
+    "build": "NODE_ENV=prod webpack -p"
   },
   "repository": {
     "type": "git",
@@ -26,7 +25,10 @@
     "eslint": "^4.19.1",
     "eslint-loader": "^2.0.0",
     "eslint-plugin-react": "^7.7.0",
+    "extract-loader": "^2.0.1",
+    "file-loader": "^1.1.11",
     "node-sass": "^4.8.3",
+    "postcss-loader": "^2.1.4",
     "react": "^16.3.2",
     "react-dom": "^16.3.2",
     "react-svg-loader": "^2.1.0",
