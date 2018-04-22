@@ -7,10 +7,14 @@ Created using the following:
 
 ## Development
 Run the following
-```Git clone repo```
-```npm install```
+```
+Git clone repo
+npm install
+```
 For dev server run 
-```npm run start```
+```
+npm run start
+```
 ## Production
 Run `npm run build`, files will be in `/dist/`
 
