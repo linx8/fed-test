@@ -5,11 +5,12 @@ Created using the following:
 - Sass
 - Webpack
 
-# Build
 ## Development
-Git clone repo
-Run `npm install`
-For dev server run `npm run start`
+Run the following
+```Git clone repo```
+```npm install```
+For dev server run 
+```npm run start```
 ## Production
 Run `npm run build`, files will be in `/dist/`
 
